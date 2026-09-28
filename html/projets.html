@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Océane HELLEC</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/projets.css?v=20260927">
+    <link rel="stylesheet" href="../css/separateur.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont/dist/tabler-icons.min.css">
+</head>
+
+<body>
+    <header class="site-header" data-include="header.html"></header>
+
+    <main class="page-content">
+
+        <!-- HERO -->
+        <section class="hero">
+            <h2>MES PROJETS</h2>
+            <h1>Projets</h1>
+        </section>
+
+        <div class="divider"></div>
+
+        <div class="projets-section">
+
+            <!-- ONGLETS -->
+            <div class="tabs">
+                <button class="tab active" onclick="showTab('bts', this)">
+                    <i class="ti ti-school"></i> Projets BTS
+                </button>
+                <button class="tab" onclick="showTab('perso', this)">
+                    <i class="ti ti-rocket"></i> Projets personnels
+                </button>
+            </div>
+
+            <!-- ========================
+                 CONTENU : PROJETS BTS
+                 ======================== -->
+            <div class="content visible" id="bts">
+
+                <p class="annee-label">1ère année — 2025/2026</p>
+                <div class="grid">
+
+                    <div class="card">
+                        <div class="card-thumb">
+                            <img src="../image/mini-projet.png" alt="Mini projet"
+                                style="width:100%; height:100%; object-fit:cover; border-radius:12px; display:block;">
+                        </div>
+                        <h3>Site web pour une association de foot
+                        </h3>
+                        <p>Réalisation d'un site web pour une association de football, mettant en avant leur équipe de
+                            football.</p>
+                        <div class="card-tags">
+                            <span class="tag accent">HTML</span>
+                            <span class="tag accent">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                        <div class="card-footer">
+                            <span class="tag">2025</span>
+                            <a href="https://github.com/cassandra761/Mini_Projet_AP.git" class="card-link">Voir le
+                                projet →</a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-thumb">
+                            <img src="../image/GSB.png" alt="Mini projet"
+                                style="width:100%; height:100%; object-fit:cover; border-radius:12px; display:block;">
+                        </div>
+                        <h3>Laboratoire GSB</h3>
+                        <p>Réalisation de site web avec base de données pour un laboratoire de biologie
+                            et un espece personnel pour faire des demandes de remboursements.</p>
+                        <div class="card-tags">
+                            <span class="tag accent">PHP</span>
+                            <span class="tag accent">SQL</span>
+                        </div>
+                        <div class="card-footer">
+                            <span class="tag">2026</span>
+                            <a href="https://github.com/Imoen04/GSB.git" class="card-link">Voir le projet →</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="divider"></div>
+
+                <p class="annee-label">2ème année — 2026/2027</p>
+                <div class="grid">
+
+                    <div class="card">
+                        <div class="card-thumb">
+                            <img src="../image/GSB.png" alt="Laboratoire GSB"
+                                style="width:100%; height:100%; object-fit:cover; border-radius:12px; display:block;">
+                        </div>
+                        <h3>Laboratoire GSB</h3>
+                        <p>Passage du site web sur CodeIgniter</p>
+                        <div class="card-tags">
+                            <span class="tag accent">PHP</span>
+                        </div>
+                        <div class="card-footer">
+                            <span class="tag">2026</span>
+                            <a href="#" class="card-link">Voir le projet →</a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-thumb">🛠️</div>
+                        <h3>Projet 4</h3>
+                        <p>Projet en cours</p>
+                        <div class="card-tags">
+                            <span class="tag accent">Java</span>
+                        </div>
+                        <div class="card-footer">
+                            <span class="tag">2027</span>
+                            <a href="#" class="card-link">Voir le projet →</a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-thumb">📊</div>
+                        <h3>Projet 5</h3>
+                        <p>Projet en cours</p>
+                        <div class="card-tags">
+                            <span class="tag accent">???</span>
+                            <span class="tag">???
+                            </span>
+                        </div>
+                        <div class="card-footer">
+                            <span class="tag">2027</span>
+                            <a href="#" class="card-link">Voir le projet →</a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-thumb">🔧</div>
+                        <h3>Projet 6</h3>
+                        <p>Projet en cours</p>
+                        <div class="card-tags">
+                            <span class="tag accent">???</span>
+                            <span class="tag">???</span>
+                        </div>
+                        <div class="card-footer">
+                            <span class="tag">2027</span>
+                            <a href="#" class="card-link">Voir le projet →</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- ============================
+                 CONTENU : PROJETS PERSONNELS
+                 ============================ -->
+            <div class="content" id="perso">
+
+                <p class="annee-label">Projets personnels</p>
+                <div class="grid">
+
+                    <div class="card">
+                        <div class="card-thumb"><i class="ti ti-books"></i></div>
+                        <h3>Site renseignant les livres de romances et de romantasy</h3>
+                        <p>Projet en cours.</p>
+                        <div class="card-tags">
+                            <span class="tag accent">???</span>
+                            <span class="tag">???</span>
+                        </div>
+                        <div class="card-footer">
+                            <span class="tag">2026</span>
+                            <a href="#" class="card-link">Voir le projet →</a>
+                        </div>
+                    </div>
+
+                    <!--<div class="card">
+                        <div class="card-thumb">🎨</div>
+                        <h3>Projet perso 2</h3>
+                        <p>Description du projet personnel réalisé en dehors du BTS.</p>
+                        <div class="card-tags">
+                            <span class="tag accent">Figma</span>
+                            <span class="tag">CSS</span>
+                        </div>
+                        <div class="card-footer">
+                            <span class="tag">2027</span>
+                            <a href="#" class="card-link">Voir le projet →</a>
+                        </div>
+                    </div>-->
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="site-footer" data-include="footer.html"></footer>
+
+    <script src="include.js"></script>
+    <script src="projets.js"></script>
+</body>

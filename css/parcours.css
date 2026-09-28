@@ -1,0 +1,163 @@
+:root {
+    --fond: #f8f5ee;
+    --carte: #eae8df;
+    --matcha: #7d9a6a;
+    --matcha-fonce: #4f6b3a;
+    --matcha-pale: #c8d9be;
+    --bordure: #c8c4b8;
+    --texte: #2a3a1e;
+}
+
+h3 {
+    margin-bottom: 0px;
+}
+
+.liste {
+    margin-left: 24px;
+    padding-left: 20px;
+}
+
+.liste li {
+    margin-bottom: 6px;
+    line-height: 1.5;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 24px;
+    /* espace pour la ligne + dot */
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    bottom: 6px;
+    width: 1.5px;
+    background: var(--matcha-pale);
+}
+
+.timeline-item {
+    position: relative;
+    /* ancre le .timeline-dot */
+    padding: 0 0 28px 24px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -1px;
+    top: 20px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #7d9a6a;
+    border: 2px solid #f8f5ee;
+    z-index: 1;
+}
+
+/* Pastille spéciale pour l'élément actuel */
+.timeline-dot.current {
+    background: #4f6b3a;
+    box-shadow: 0 0 0 3px #c8d9be;
+}
+
+.timeline-card {
+    background: var(--carte);
+    border-radius: 12px;
+    border: 0.5px solid var(--bordure);
+    padding: 18px 20px;
+}
+
+.timeline-card .box {
+    text-align: left;
+}
+
+.timeline-date {
+    font-size: 14px;
+    color: var(--matcha);
+    background: var(--matcha-pale);
+    padding: 3px 10px;
+    border-radius: 20px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.timeline-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.tag {
+    font-size: 12px;
+    background: var(--fond);
+    color: var(--texte);
+    border: 0.5px solid var(--bordure);
+    border-radius: 10px;
+    padding: 2px 8px;
+}
+
+.tag.highlight {
+    background: var(--matcha);
+    color: var(--fond);
+}
+
+/*===========================CERTIFICATIONS===========================*/
+.certifs-section {
+    padding: 24px 32px 40px;
+}
+
+.certifs-section h2 {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--texte);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.certifs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 10px;
+}
+
+.certif-card {
+    background: var(--carte);
+    border: 0.5px solid var(--bordure);
+    border-radius: 10px;
+    padding: 14px 16px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.certif-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: var(--matcha-pale);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--matcha-fonce);
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.certif-card h4 {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--texte);
+    margin-bottom: 2px;
+    line-height: 1.3;
+}
+
+.certif-card p {
+    font-size: 11px;
+    color: var(--matcha);
+}

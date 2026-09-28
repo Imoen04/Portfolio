@@ -1,0 +1,228 @@
+/* ===========================
+   PALETTE MATCHA
+   =========================== */
+:root {
+    --fond: #f8f5ee;
+    --carte: #eae8df;
+    --matcha: #7d9a6a;
+    --matcha-fonce: #4f6b3a;
+    --matcha-pale: #c8d9be;
+    --bordure: #c8c4b8;
+    --texte: #2a3a1e;
+}
+
+/* ===========================
+   RESET
+   =========================== */
+* {
+    box-sizing: border-box;
+}
+
+.competences-section,
+.competences-section * {
+    margin: 0;
+    padding: 0;
+}
+
+/* ===========================
+   DIVIDER
+   =========================== */
+.divider {
+    height: 0.5px;
+    background: var(--bordure);
+    margin: 24px 0;
+}
+
+/* ===========================
+   SECTION
+   =========================== */
+.competences-section {
+    padding: 8px 32px 48px;
+}
+
+.section-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--texte);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ===========================
+   CATÉGORIES
+   =========================== */
+.categories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-bottom: 8px;
+}
+
+.card {
+    background: var(--carte);
+    border-radius: 12px;
+    border: 0.5px solid var(--bordure);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.categorie-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: var(--matcha-pale);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--matcha-fonce);
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.card-header h3 {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--texte);
+}
+
+/* ===========================
+   BARRES DE NIVEAU
+   =========================== */
+.skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.skill-row {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.skill-row-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skill-name {
+    font-size: 12px;
+    color: var(--texte);
+}
+
+.skill-level {
+    font-size: 10px;
+    color: var(--matcha);
+}
+
+.bar-bg {
+    height: 4px;
+    background: var(--bordure);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.bar-fill {
+    height: 100%;
+    border-radius: 4px;
+    background: var(--matcha);
+}
+
+.bar-fill.fonce {
+    background: var(--matcha-fonce);
+}
+
+/* ===========================
+   OUTILS
+   =========================== */
+.outils {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.outil {
+    background: var(--carte);
+    border: 0.5px solid var(--bordure);
+    border-radius: 10px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.outil-icon {
+    font-size: 24px;
+    color: var(--matcha-fonce);
+}
+
+.outil span {
+    font-size: 12px;
+    color: var(--texte);
+    font-weight: 500;
+    text-align: center;
+}
+
+.outil small {
+    font-size: 10px;
+    color: var(--matcha);
+}
+
+/* ===========================
+   SOFT SKILLS
+   =========================== */
+.soft-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.soft-tag {
+    background: var(--carte);
+    border: 0.5px solid var(--bordure);
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 12px;
+    color: var(--texte);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.soft-tag i {
+    color: var(--matcha);
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+@media (max-width: 768px) {
+    .categories {
+        grid-template-columns: 1fr;
+    }
+
+    .outils {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .outils {
+        grid-template-columns: 1fr 1fr;
+    }
+}

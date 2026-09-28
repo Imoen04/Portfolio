@@ -1,0 +1,202 @@
+/* ===========================
+   PALETTE MATCHA
+   =========================== */
+:root {
+    --fond: #f8f5ee;
+    --carte: #eae8df;
+    --matcha: #7d9a6a;
+    --matcha-fonce: #4f6b3a;
+    --matcha-pale: #c8d9be;
+    --bordure: #c8c4b8;
+    --texte: #2a3a1e;
+}
+
+/* ===========================
+   RESET
+   =========================== */
+* {
+    box-sizing: border-box;
+}
+
+.projets-section,
+.projets-section * {
+    margin: 0;
+    padding: 0;
+}
+
+/* ===========================
+   DIVIDER
+   =========================== */
+.divider {
+    height: 0.5px;
+    background: var(--bordure);
+    margin: 24px 0;
+}
+
+.projets-section {
+    padding: 8px 32px 48px;
+}
+
+/* ===========================
+   ONGLETS
+   =========================== */
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 28px;
+}
+
+.tab {
+    font-size: 13px;
+    padding: 8px 20px;
+    border-radius: 20px;
+    border: 1px solid var(--bordure);
+    background: var(--carte);
+    color: var(--matcha-fonce);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s;
+}
+
+.tab:hover {
+    background: var(--matcha-pale);
+}
+
+.tab.active {
+    background: var(--matcha-fonce);
+    color: var(--fond);
+    border-color: var(--matcha-fonce);
+}
+
+/* ===========================
+   CONTENU ONGLETS
+   =========================== */
+.content {
+    display: none;
+}
+
+.content.visible {
+    display: block;
+}
+
+/* ===========================
+   LABEL ANNÉE
+   =========================== */
+.annee-label {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--texte);
+    margin-bottom: 16px;
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.annee-label::after {
+    content: '';
+    flex: 1;
+    height: 0.5px;
+    background: var(--bordure);
+}
+
+/* ===========================
+   GRILLE
+   =========================== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-bottom: 8px;
+}
+
+/* ===========================
+   CARTE PROJET
+   =========================== */
+.card {
+    background: var(--carte);
+    border-radius: 12px;
+    border: 0.5px solid var(--bordure);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-thumb {
+    height: 80px;
+    border-radius: 8px;
+    background: var(--matcha-pale);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+}
+
+.card h3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--texte);
+}
+
+.card p {
+    font-size: 12px;
+    color: var(--matcha-fonce);
+    line-height: 1.6;
+    flex: 1;
+}
+
+.card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.tag {
+    font-size: 10px;
+    background: var(--fond);
+    color: var(--texte);
+    border: 0.5px solid var(--bordure);
+    border-radius: 8px;
+    padding: 2px 8px;
+}
+
+.tag.accent {
+    background: var(--matcha);
+    color: var(--fond);
+    border-color: var(--matcha);
+}
+
+.card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4px;
+}
+
+.card-link {
+    font-size: 11px;
+    color: var(--matcha);
+    text-decoration: none;
+}
+
+.card-link:hover {
+    color: var(--texte);
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
