@@ -1,0 +1,229 @@
+/* ===========================
+   PALETTE MATCHA
+   =========================== */
+:root {
+    --fond: #f8f5ee;
+    --carte: #eae8df;
+    --matcha: #7d9a6a;
+    --matcha-fonce: #4f6b3a;
+    --matcha-pale: #c8d9be;
+    --bordure: #c8c4b8;
+    --texte: #2a3a1e;
+}
+
+/* ===========================
+   RESET
+   =========================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--fond);
+    font-family: sans-serif;
+    color: var(--texte);
+}
+
+/* ===========================
+   DIVIDER
+   =========================== */
+.divider {
+    height: 0.5px;
+    background: var(--bordure);
+    margin: 24px 0;
+}
+
+/* ===========================
+   HERO
+   =========================== */
+.hero {
+    padding: 1rem 0;
+}
+
+.hero h2 {
+    font-family: Inter, system-ui, sans-serif;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--matcha-fonce);
+    margin: 0.83em 0;
+}
+
+.hero h1 {
+    font-family: Inter, system-ui, sans-serif;
+    font-size: clamp(2rem, 3vw, 3rem);
+    font-weight: 700;
+    color: var(--texte);
+    margin: 0 0 1rem;
+}
+
+/* ===========================
+   SECTION CONTACT
+   =========================== */
+.contact-section {
+    padding: 8px 32px 48px;
+}
+
+/* ===========================
+   CARTE PROFIL
+   =========================== */
+.profil-card {
+    background: var(--carte);
+    border-radius: 16px;
+    border: 0.5px solid var(--bordure);
+    padding: 32px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+/* Photo — initiales ou vraie photo */
+.profil-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: var(--matcha-pale);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--matcha-fonce);
+    flex-shrink: 0;
+    border: 3px solid var(--matcha);
+    /* Si tu utilises une vraie photo : */
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.profil-info h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--texte);
+    margin-bottom: 4px;
+}
+
+.profil-info>p {
+    font-size: 13px;
+    color: var(--matcha);
+    margin-bottom: 20px;
+}
+
+.profil-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Lien contact */
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--fond);
+    border: 0.5px solid var(--bordure);
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 12px;
+    color: var(--texte);
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.contact-link:hover {
+    background: var(--matcha-pale);
+}
+
+.contact-link i {
+    color: var(--matcha);
+    font-size: 16px;
+}
+
+/* Bouton CV */
+.btn-cv {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--matcha-fonce);
+    border: none;
+    border-radius: 20px;
+    padding: 8px 18px;
+    font-size: 12px;
+    color: var(--fond);
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-cv:hover {
+    background: var(--texte);
+}
+
+.btn-cv i {
+    font-size: 16px;
+}
+
+/* ===========================
+   INFOS COMPLÉMENTAIRES
+   =========================== */
+.infos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.info-card {
+    background: var(--carte);
+    border: 0.5px solid var(--bordure);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.info-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: var(--matcha-pale);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--matcha-fonce);
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.info-card h4 {
+    font-size: 11px;
+    color: var(--matcha);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 4px;
+}
+
+.info-card p {
+    font-size: 13px;
+    color: var(--texte);
+    font-weight: 500;
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+@media (max-width: 768px) {
+    .profil-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profil-links {
+        justify-content: center;
+    }
+
+    .infos-grid {
+        grid-template-columns: 1fr;
+    }
+}
